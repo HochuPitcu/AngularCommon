@@ -1,0 +1,51 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+<div class="form-froup row col-md-6" style="width: 60%;">
+    <div class="form-group col-md-5">
+    <label class="col-form-label">Отдел</label>
+    <div>
+        <input type="text" class="form-control" [(ngModel)]="Department"
+        placeholder="Enter Department">
+    </div>
+    </div>
+    <div class="form-group col-md-5">
+    <label class="col-form-label">Ф.И.О.</label>
+    <div>
+        <input type="text" class="form-control" [(ngModel)]="FullName"
+        placeholder="Enter FullName">
+    </div>
+</div>
+<div class="form-group col-md-5">
+    <label class="col-form-label">Дата рождения</label>
+    <div>
+        <input type="date" class="form-control" [(ngModel)]="DateOfBirth">
+    </div>
+</div>
+<div class="form-group col-md-5">
+    <label class="col-form-label">Дата принятия</label>
+    <div>
+        <input type="date" class="form-control" [(ngModel)]="DateOfJoining">
+    </div>
+</div>
+<div class="form-group col-md-5">
+    <label class=" col-form-label">Зарплата</label>
+<div>
+    <input type="text" class="form-control" [(ngModel)]="Salary"
+    placeholder="Enter Salary">
+</div>
+<br>  
+  <div class="form-group">
+    <button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+        Добавить
+    </button>
+    
+    </div>
+    
+    <div class="form-group">
+    <button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+        Отредактировать
+    </button>
+    </div>
+</div>
+
+</div>
